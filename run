@@ -1,0 +1,26 @@
+#!/bin/bash
+cd "$(dirname "$0")"
+
+read -p "Executing this Script will create a new build directory (inside of this scipts directory), and use CMake to compile files, do you want to contunie? (You need to have CMake installed beforehand) (Y/N)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
+fi
+
+echo Creating build directory
+mkdir build
+
+echo go to build
+cd build
+
+echo Running CMake
+CMake ..
+
+echo Running make
+make
+
+clear
+
+echo Executing Main File
+./Main
