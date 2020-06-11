@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jonas/Documents/Uni/Algorithmen/Ass2/bst.hpp
+iostream
+-
+
+/Users/jonas/Documents/Uni/Algorithmen/Ass2/main.cpp
+bst.hpp
+/Users/jonas/Documents/Uni/Algorithmen/Ass2/bst.hpp
+
